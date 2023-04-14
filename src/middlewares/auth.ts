@@ -6,7 +6,7 @@ dotenv.config();
 
 const validateToken = async (req: Request, res: Response, next: NextFunction) => {
     try{
-        const authHeader = req.headers["authorization"];
+        const authHeader = req.header("authorization");
         if(authHeader){
             const token = authHeader.split("Bearer ")[1];
         
